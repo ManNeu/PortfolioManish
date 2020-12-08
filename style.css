@@ -1,0 +1,272 @@
+:root{
+    --textAll:red;
+    --textSome: #4b4b4b;
+    --colorAll: #eaeaea;
+    --colorSome: #fff;
+    --borderAll: #cccccc;
+
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+
+}
+.container{
+	width: 95%;
+	margin: auto;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+color: var(--textSome);
+font-family: 'Nanum Gothic', sans-serif;
+}
+h1 { font-size: 56px;}
+h2 { font-size: 36px;}
+h3 { font-size: 28px;}
+h4 { font-size: 24px;}
+h5 { font-size: 20px;}
+h6 { font-size: 16px;}
+
+p, textarea, input, label,li {
+    color: var(--textSome);
+    font-family: 'Roboto', sans-serif;
+}
+p{
+    text-align: justify;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.first-section, .third-section{
+    background-color: var(--colorAll);
+    border: 1px solid var(--borderAll);
+    overflow: auto;
+}
+.second-section, .fourth-section{
+    background-color: var(--colorSome);
+    border: 1px solid var(--borderAll);
+    overflow: auto;
+}
+.intro{
+    display: grid;
+    text-align: center;
+    align-content: center;
+    border-bottom: 2px;
+    min-height: 10rem;
+    
+}
+.topWrapper{
+    border: 1px solid var(--borderAll);
+    display:grid;
+    border-radius: 3px, 3px, 0px, 0px;
+    grid-template-columns: 1fr 1fr;
+   
+    grid-template-areas: 
+    'navBar navBar' 'navLeft navRight';
+}
+.nav-first-item{
+    display: flex;
+}
+.dot1, .dot2, .dot3{
+    background-color: black;
+    height: 10px;
+    width: 10px;
+    margin:3px;
+    border-radius: 50%;
+}
+
+.dot1{
+    background-color: blue;
+}
+.dot2{
+    background-color: brown;
+}
+.dot3{
+    background-color: gold;
+}
+.navBar{
+    grid-area: navBar;
+    border: 1px solid var(--borderAll);
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+ .navLeft{
+     grid-area: navLeft;
+    
+}
+
+.profilePic{
+    display: block;
+    margin: auto;
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border: 1px solid var(--borderAll);
+
+}
+.textPic{
+    text-align: center;
+}
+ .navRight{
+     grid-area: navRight;
+     display: grid;
+     align-content: center;
+  
+}
+.rightContent{
+    display: grid;
+    border: 2px solid var(--borderAll);
+    width: 250px;
+    padding: 10px;
+    background-color: burlywood;
+
+
+}
+listItem{
+    margin: 0;
+    padding: 10px;
+}
+
+.second-section{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    padding-bottom: 20px;
+    padding-top: 20px;
+    gap: 90px;
+}
+.socialLinks{
+    display:grid;
+    justify-content: center;
+    text-align: center;
+
+}
+.listSkills{
+border: 2px solid var(--borderAll);
+background-color: yellowgreen;
+
+}
+.projects{
+    text-align: center;
+}
+.myRepositories{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+}
+.screenshot{
+    display: block;
+    width: 90%;
+    height: 150px;
+  object-fit: cover;
+}
+
+.link{
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+}
+.repoTitle{
+    justify-content: center;
+    text-align: center;
+    text-decoration: black;
+
+}
+.desProject{
+
+    color: black;
+    font-style: normal;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
+}
+.desApp{
+    text-align: center;
+}
+.fourth-section{
+    text-align: center;
+}
+.form{
+	display: block;
+	max-width: 520px;
+	margin: auto;
+	border: 1.5px solid var(--borderAll);
+	padding: 10px;
+	border-radius: 5px;
+	background-color: var(--colorAll);
+	margin-bottom: 20px;
+
+}
+
+.form label{
+	line-height: 2.7rem;
+}
+
+.form textarea{
+	min-height: 95px;
+	font-size: 12px;
+}
+
+
+.name-field{
+	width: 95%;
+	padding-top: 8px;
+	padding-bottom:8px; 
+	background-color: var(--colorSome);
+	border-radius: 5px;
+	border:1px solid var(--borderAll);
+	font-size: 12px;
+}
+
+
+.button{
+	margin-top: 5px;
+	width: 100%;
+	padding-top: 8px;
+	padding-bottom:8px; 
+	color: #fff;
+	background-color: wheat;
+	border:none;
+}
+@media screen and (max-width){
+    .container{
+width: 97%;
+    } 
+   
+}
+@media screen and (max-width:780px){
+    container{
+width: 97%;
+
+    } 
+    img{
+        size: 100%
+    }
+    .topWrapper{
+        grid-template-columns: 1fr;
+   
+    grid-template-areas: 
+    'navBar' 'navLeft' 'navRight';
+    }
+    .rightContent{
+        align-content: center;
+    }
+
+}
+@media screen and (max-width: 480px){
+    .container{
+        max-width: 95%;
+        
+    }
+    img{
+        size: 100%;
+    }
+    .topWrapper{
+        grid-template-columns: 1fr;
+   
+    grid-template-areas: 
+    'navBar' 'navLeft' 'navRight';
+    }
+.rightContent{
+    align-content: center;
+}
+}
